@@ -71,20 +71,11 @@ a {
   color: var(--color-white);
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
+.logo-image {
+  display: block;
+  width: auto;
   height: 44px;
-  padding: 0 0.7rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.04);
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -659,11 +650,8 @@ a {
     gap: 0.55rem;
   }
 
-  .logo-mark {
-    min-width: 38px;
+  .logo-image {
     height: 38px;
-    padding: 0 0.55rem;
-    font-size: 0.72rem;
   }
 
   .logo-text {
