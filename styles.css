@@ -460,8 +460,7 @@ a {
 }
 
 #problemes .eyebrow {
-  color: #bd7b1f;
-  text-shadow: 0 0 10px rgba(189, 123, 31, 0.16);
+  color: #BD7B1F !important;
 }
 
 #problemes .section-copy h2 {
