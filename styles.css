@@ -605,29 +605,57 @@ a {
 }
 
 #services .section-copy h2 {
-  max-width: 19.5ch;
-  font-size: clamp(1.95rem, 2.9vw, 3rem);
-  line-height: 1.16;
+  max-width: 18.5ch;
+  font-size: clamp(1.95rem, 2.45vw, 2.72rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
 }
 
 .solution-accent {
   color: #f3d288;
-  background: linear-gradient(135deg, rgba(247, 226, 172, 0.42), rgba(189, 123, 31, 0.16));
+  background: linear-gradient(135deg, rgba(247, 226, 172, 0.44), rgba(189, 123, 31, 0.2));
   border-radius: 0.34em;
-  padding: 0.02em 0.2em;
-  box-shadow: inset 0 0 0 1px rgba(247, 226, 172, 0.2);
+  padding: 0.02em 0.22em;
+  box-shadow: inset 0 0 0 1px rgba(247, 226, 172, 0.22);
+}
+
+.solution-inline-emphasis {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
 }
 
 #services .section-copy p {
   max-width: 50ch;
 }
 
+#services .cta-row {
+  justify-content: center;
+}
+
+#services .cta-row .button {
+  min-height: 50px;
+  padding-inline: 1.65rem;
+  font-size: 1rem;
+}
+
 #services .feature-card {
   padding: 1.32rem 1.4rem;
   border-radius: 20px;
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 24px rgba(20, 5, 24, 0.16);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 24px rgba(20, 5, 24, 0.18);
+}
+
+#services .feature-card h3 {
+  margin-bottom: 0.6rem;
+  color: rgba(255, 255, 255, 0.97);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+#services .feature-card p {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.58;
 }
 
 .solution-card-icon {
@@ -655,7 +683,7 @@ a {
 @keyframes mobile-card-fade-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -788,7 +816,9 @@ a {
   }
 
   #services .section-copy h2 {
-    max-width: 22ch;
+    max-width: 17ch;
+    font-size: clamp(1.62rem, 5.4vw, 2rem);
+    line-height: 1.2;
   }
 
   .panel-card-premium {
@@ -973,20 +1003,20 @@ a {
 
   #services .feature-card {
     opacity: 0;
-    transform: translateY(14px);
-    animation: mobile-card-fade-up 0.5s ease forwards;
+    transform: translateY(18px);
+    animation: mobile-card-fade-up 0.58s ease forwards;
   }
 
   #services .feature-card:nth-child(1) {
-    animation-delay: 0.05s;
+    animation-delay: 0.08s;
   }
 
   #services .feature-card:nth-child(2) {
-    animation-delay: 0.15s;
+    animation-delay: 0.22s;
   }
 
   #services .feature-card:nth-child(3) {
-    animation-delay: 0.25s;
+    animation-delay: 0.36s;
   }
 
   .panel-card,
