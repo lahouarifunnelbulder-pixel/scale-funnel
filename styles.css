@@ -666,8 +666,8 @@ a {
   }
 
   .hero-section {
-    min-height: 100svh;
-    padding: 1.55rem 0 2.5rem;
+    min-height: 112svh;
+    padding: 2.6rem 0 3rem;
     align-items: center;
   }
 
@@ -676,12 +676,13 @@ a {
   }
 
   .hero-grid {
-    gap: 1.4rem;
+    gap: 1.6rem;
     align-items: center;
   }
 
   .hero-content {
     text-align: center;
+    padding-top: 1rem;
   }
 
   .hero-orb-left {
@@ -742,7 +743,7 @@ a {
   }
 
   .hero-actions {
-    margin-top: 1.75rem;
+    margin-top: 2.4rem;
     justify-content: center;
   }
 
@@ -753,13 +754,13 @@ a {
   }
 
   .hero-note {
-    margin-top: 0.8rem;
+    margin-top: 1rem;
     margin-inline: auto;
     font-size: 0.82rem;
   }
 
   .hero-panel {
-    margin-top: 1.3rem;
+    margin-top: 3.8rem;
     justify-content: center;
   }
 
