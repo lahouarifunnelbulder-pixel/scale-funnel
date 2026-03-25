@@ -1253,6 +1253,16 @@ a {
   border: 1px solid var(--color-neutral-200);
 }
 
+.faq-container {
+  max-width: 860px;
+}
+
+.faq-copy {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: 1.8rem;
+}
+
 .faq-list {
   display: grid;
   gap: 1rem;
@@ -1260,36 +1270,37 @@ a {
 
 .faq-item {
   padding: 1.4rem 1.5rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2f2234;
+  border: 1px solid rgba(72, 2, 83, 0.14);
+  box-shadow: 0 12px 24px rgba(39, 16, 47, 0.08);
 }
 
 .faq-item summary {
   cursor: pointer;
   font-size: 1.02rem;
   font-weight: 700;
+  color: #351c3c;
 }
 
 .faq-item p {
   margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: #5c4a63;
 }
 
 .final-section {
   background:
-    radial-gradient(circle at 80% 20%, rgba(189, 123, 31, 0.13), rgba(189, 123, 31, 0) 40%),
-    radial-gradient(circle at 12% 84%, rgba(163, 74, 185, 0.2), rgba(163, 74, 185, 0) 45%),
-    linear-gradient(138deg, #26002d 0%, var(--color-primary) 58%, var(--color-secondary) 100%);
+    radial-gradient(circle at 84% 22%, rgba(189, 123, 31, 0.18), rgba(189, 123, 31, 0) 38%),
+    radial-gradient(circle at 18% 84%, rgba(163, 74, 185, 0.14), rgba(163, 74, 185, 0) 42%),
+    linear-gradient(155deg, #140019 0%, #2a0032 62%, #390244 100%);
 }
 
 .final-card {
   padding: 3rem;
   text-align: center;
   color: var(--color-white);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(145deg, rgba(40, 8, 48, 0.94), rgba(25, 4, 31, 0.94));
+  border: 1px solid rgba(189, 123, 31, 0.4);
   box-shadow: var(--shadow-strong);
 }
 
@@ -1301,6 +1312,58 @@ a {
 
 .final-card .button {
   margin-top: 2rem;
+}
+
+.site-footer {
+  background: #1b1420;
+  border-top: 1px solid rgba(228, 228, 228, 0.12);
+  color: rgba(244, 244, 244, 0.88);
+  padding: 2.3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 1.6rem;
+}
+
+.footer-title {
+  margin: 0 0 0.42rem;
+  color: #fff;
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.footer-heading {
+  margin: 0 0 0.65rem;
+  color: #e4e4e4;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-nav,
+.footer-legal {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.site-footer a {
+  color: rgba(244, 244, 244, 0.9);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #BD7B1F;
+}
+
+.footer-copy {
+  margin-top: 0.75rem;
+  font-size: 0.86rem;
+  color: rgba(228, 228, 228, 0.72);
 }
 
 @media (max-width: 1080px) {
@@ -1315,9 +1378,13 @@ a {
 
   .hero-grid,
   .section-grid,
-  .faq-layout,
   .benefits-layout {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .hero-grid {
