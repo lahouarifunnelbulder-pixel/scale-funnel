@@ -1153,10 +1153,14 @@ a {
   height: auto;
   display: block;
   transform: translateY(0);
+  animation: none;
+}
+
+.scrolling-shot.is-animating {
   animation: realisation-scroll 16s ease-in-out infinite alternate;
 }
 
-.realisations-frame:hover .scrolling-shot {
+.realisations-frame:hover .scrolling-shot.is-animating {
   animation-play-state: paused;
 }
 
@@ -1752,10 +1756,16 @@ a {
 
   .realisations-content h3 {
     font-size: 1.15rem;
+    margin-bottom: 0.56rem;
+  }
+
+  .realisations-sector {
+    margin: 0 0 0.72rem;
   }
 
   .realisations-content p {
     font-size: 0.93rem;
+    line-height: 1.7;
   }
 
   .realisations-controls {
@@ -1763,8 +1773,7 @@ a {
   }
 
   .realisations-nav {
-    width: 2rem;
-    height: 2rem;
+    display: none;
   }
 
   #services .feature-card {
