@@ -1193,11 +1193,15 @@ a {
 
 .proof-title {
   margin: 0;
-  color: #f3d39a;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.81rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.proof-accent {
+  color: #BD7B1F;
 }
 
 .proof-list {
@@ -1210,6 +1214,11 @@ a {
 .proof-list li {
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.91rem;
+}
+
+.proof-number {
+  color: #BD7B1F;
+  font-weight: 700;
 }
 
 .realisations-controls {
