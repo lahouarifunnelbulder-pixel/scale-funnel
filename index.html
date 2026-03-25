@@ -258,37 +258,54 @@
       </section>
 
       <section class="section section-light" id="benefices">
-        <div class="container section-grid benefits-layout">
-          <div class="section-copy narrow">
+        <div class="container benefits-shell">
+          <div class="section-copy centered benefits-copy">
             <p class="eyebrow">Des bénéfices concrets</p>
-            <h2>Une homepage pensée pour soutenir votre développement local.</h2>
+            <h2>Ce que cette méthode change pour votre activité</h2>
+            <p class="benefits-transition">Concrètement, voici ce que cette méthode change pour votre activité.</p>
             <p>
-              L’objectif n’est pas seulement d’avoir un site plus propre, mais une présence digitale plus utile
-              pour attirer, rassurer et déclencher davantage de prises de contact.
+              L’objectif n’est pas seulement d’avoir une plus belle page, mais une présence locale plus utile pour rassurer, faciliter la prise de contact et générer plus de demandes de devis.
             </p>
           </div>
 
-          <div class="benefits-grid">
-            <article class="benefit-card">
-              <h3>Plus de visibilité locale</h3>
-              <p>Votre activité devient plus claire pour les prospects de votre secteur.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Plus de crédibilité</h3>
-              <p>Votre image donne davantage confiance dès la première visite.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Plus d’appels</h3>
-              <p>La prise de contact devient plus simple et plus naturelle.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Plus de demandes de devis</h3>
-              <p>Le visiteur comprend plus vite ce que vous faites et pourquoi vous contacter.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Une image plus professionnelle</h3>
-              <p>Votre présence en ligne devient plus cohérente, plus nette et plus rassurante.</p>
-            </article>
+          <div class="benefits-showcase" aria-label="Bénéfices principaux">
+            <div class="benefits-viewport" id="benefits-viewport">
+              <div class="benefits-track" id="benefits-track">
+                <article class="benefit-slide is-active" data-step="1">
+                  <span class="benefit-step">01</span>
+                  <h3>Plus de visibilité locale</h3>
+                  <p>Votre activité ressort plus clairement dans votre zone.</p>
+                </article>
+                <article class="benefit-slide" data-step="2">
+                  <span class="benefit-step">02</span>
+                  <h3>Plus de confiance dès la première visite</h3>
+                  <p>Votre page rassure plus vite et donne une image plus sérieuse.</p>
+                </article>
+                <article class="benefit-slide" data-step="3">
+                  <span class="benefit-step">03</span>
+                  <h3>Plus d’appels et de demandes de devis</h3>
+                  <p>Le parcours devient plus simple et plus naturel pour passer à l’action.</p>
+                </article>
+                <article class="benefit-slide" data-step="4">
+                  <span class="benefit-step">04</span>
+                  <h3>Une activité plus claire à comprendre</h3>
+                  <p>Le visiteur comprend plus vite ce que vous faites et pourquoi il devrait vous contacter.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="benefits-controls" aria-label="Navigation bénéfices">
+              <button class="benefit-nav" type="button" id="benefits-prev" aria-label="Bénéfice précédent">‹</button>
+              <div class="benefit-progress" id="benefits-progress" role="status" aria-live="polite">1 / 4</div>
+              <button class="benefit-nav" type="button" id="benefits-next" aria-label="Bénéfice suivant">›</button>
+            </div>
+
+            <div class="benefits-dots" id="benefits-dots" aria-hidden="true">
+              <span class="dot is-active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
           </div>
         </div>
       </section>
@@ -399,5 +416,61 @@
         </div>
       </section>
     </main>
+    <script>
+      function initBenefitsShowcase() {
+        const viewport = document.getElementById('benefits-viewport');
+        const track = document.getElementById('benefits-track');
+        const prev = document.getElementById('benefits-prev');
+        const next = document.getElementById('benefits-next');
+        const progress = document.getElementById('benefits-progress');
+        const dots = Array.from(document.querySelectorAll('#benefits-dots .dot'));
+        const slides = Array.from(document.querySelectorAll('.benefit-slide'));
+        if (!viewport || !track || !prev || !next || !progress || slides.length === 0) return;
+
+        let index = 0;
+        const desktop = window.matchMedia('(min-width: 900px)');
+
+        function setActive(i, smooth = true) {
+          index = Math.max(0, Math.min(i, slides.length - 1));
+          slides.forEach((slide, idx) => slide.classList.toggle('is-active', idx === index));
+          dots.forEach((dot, idx) => dot.classList.toggle('is-active', idx === index));
+          progress.textContent = `${index + 1} / ${slides.length}`;
+
+          if (desktop.matches) {
+            track.style.transition = smooth ? 'transform 420ms ease' : 'none';
+            track.style.transform = `translateX(${-index * 100}%)`;
+          }
+        }
+
+        prev.addEventListener('click', () => setActive(index - 1));
+        next.addEventListener('click', () => setActive(index + 1));
+
+        viewport.addEventListener('scroll', () => {
+          if (desktop.matches) return;
+          const width = viewport.clientWidth;
+          if (!width) return;
+          const newIndex = Math.round(viewport.scrollLeft / width);
+          if (newIndex !== index) setActive(newIndex, false);
+        }, { passive: true });
+
+        function handleLayout() {
+          if (desktop.matches) {
+            viewport.scrollLeft = 0;
+            setActive(index, false);
+          } else {
+            track.style.transition = 'none';
+            track.style.transform = 'none';
+            viewport.scrollTo({ left: viewport.clientWidth * index, behavior: 'auto' });
+          }
+        }
+
+        desktop.addEventListener('change', handleLayout);
+        window.addEventListener('resize', handleLayout);
+        setActive(0, false);
+      }
+
+      window.addEventListener('DOMContentLoaded', initBenefitsShowcase);
+    </script>
+
   </body>
 </html>
