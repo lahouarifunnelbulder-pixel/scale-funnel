@@ -753,9 +753,9 @@ a {
 
 #methode {
   background:
-    radial-gradient(circle at 18% 20%, rgba(163, 74, 185, 0.12), rgba(163, 74, 185, 0) 38%),
-    radial-gradient(circle at 88% 78%, rgba(189, 123, 31, 0.1), rgba(189, 123, 31, 0) 44%),
-    linear-gradient(180deg, #f6f3f8 0%, #f1eef5 100%);
+    radial-gradient(circle at 16% 18%, rgba(163, 74, 185, 0.14), rgba(163, 74, 185, 0) 40%),
+    radial-gradient(circle at 86% 76%, rgba(189, 123, 31, 0.12), rgba(189, 123, 31, 0) 46%),
+    linear-gradient(180deg, #f6f3f8 0%, #f0edf5 100%);
 }
 
 #methode .eyebrow {
@@ -763,12 +763,12 @@ a {
 }
 
 .method-copy {
-  max-width: 760px;
-  margin-bottom: 2.4rem;
+  max-width: 780px;
+  margin-bottom: 2.45rem;
 }
 
 .method-copy h2 {
-  max-width: 19ch;
+  max-width: 20ch;
   margin-inline: auto;
   line-height: 1.16;
 }
@@ -785,7 +785,7 @@ a {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.05rem;
   position: relative;
 }
 
@@ -794,14 +794,14 @@ a {
   position: absolute;
   left: 8%;
   right: 8%;
-  top: 1.12rem;
+  top: 1.14rem;
   height: 2px;
-  background: linear-gradient(90deg, rgba(72, 2, 83, 0.16), rgba(189, 123, 31, 0.28), rgba(72, 2, 83, 0.16));
+  background: linear-gradient(90deg, rgba(72, 2, 83, 0.14), rgba(189, 123, 31, 0.3), rgba(72, 2, 83, 0.14));
 }
 
 .method-step {
   position: relative;
-  padding-top: 2.1rem;
+  padding-top: 2.2rem;
 }
 
 .method-index {
@@ -809,8 +809,8 @@ a {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 2.1rem;
-  height: 2.1rem;
+  min-width: 2.15rem;
+  height: 2.15rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -819,34 +819,48 @@ a {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #3d1948;
-  background: linear-gradient(135deg, rgba(247, 226, 172, 0.95), rgba(189, 123, 31, 0.8));
+  background: linear-gradient(135deg, rgba(247, 226, 172, 0.95), rgba(189, 123, 31, 0.82));
   box-shadow: 0 8px 18px rgba(66, 26, 76, 0.18);
 }
 
-.method-card {
+.visa-card {
   min-height: 100%;
-  padding: 1.25rem 1.15rem 1.2rem;
+  padding: 1.22rem 1.12rem 1.18rem;
   border-radius: 20px;
-  border: 1px solid rgba(72, 2, 83, 0.12);
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 12px 24px rgba(45, 18, 52, 0.08);
+  border: 1px solid rgba(72, 2, 83, 0.14);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 26px rgba(45, 18, 52, 0.09);
 }
 
-.method-icon {
-  width: 2rem;
-  height: 2rem;
+.visa-letter {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.66rem;
-  background: linear-gradient(145deg, rgba(189, 123, 31, 0.22), rgba(72, 2, 83, 0.1));
+  min-width: 1.95rem;
+  height: 1.95rem;
+  border-radius: 0.6rem;
+  margin-bottom: 0.64rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #3b1546;
+  background: linear-gradient(140deg, rgba(247, 226, 172, 0.9), rgba(189, 123, 31, 0.72));
+}
+
+.method-icon {
+  width: 1.94rem;
+  height: 1.94rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.62rem;
+  background: linear-gradient(145deg, rgba(189, 123, 31, 0.2), rgba(72, 2, 83, 0.1));
   box-shadow: inset 0 0 0 1px rgba(72, 2, 83, 0.14);
-  margin-bottom: 0.72rem;
+  margin: 0 0 0.72rem 0.42rem;
 }
 
 .method-icon svg {
-  width: 1.06rem;
-  height: 1.06rem;
+  width: 1.04rem;
+  height: 1.04rem;
   stroke: #5b226b;
   stroke-width: 1.7;
   fill: none;
@@ -854,18 +868,39 @@ a {
   stroke-linejoin: round;
 }
 
-.method-card h3 {
-  margin: 0 0 0.52rem;
-  font-size: 1.1rem;
-  line-height: 1.34;
+.visa-card h3 {
+  margin: 0 0 0.46rem;
+  font-size: 1.04rem;
+  line-height: 1.32;
   color: #2e2333;
 }
 
-.method-card p {
+.visa-card h4 {
+  margin: 0 0 0.52rem;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #3f2f45;
+  font-weight: 600;
+}
+
+.visa-card p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.58;
   color: #4f4453;
+}
+
+.method-cta-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.method-cta-row .button {
+  min-height: 50px;
+  padding-inline: 1.65rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
 }
 
 @keyframes method-step-reveal {
@@ -1045,7 +1080,11 @@ a {
   .method-index {
     position: static;
     transform: none;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.78rem;
+  }
+
+  .method-cta-row {
+    margin-top: 1.65rem;
   }
 
   .main-nav {
@@ -1218,7 +1257,7 @@ a {
   }
 
   .method-copy h2 {
-    max-width: 15.5ch;
+    max-width: 15.8ch;
   }
 
   .method-copy p {
@@ -1276,16 +1315,42 @@ a {
     font-size: 0.69rem;
   }
 
-  .method-card {
-    padding: 1.15rem 1.08rem 1.08rem;
+  .visa-letter {
+    min-width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.84rem;
+    margin-bottom: 0.58rem;
   }
 
-  .method-card h3 {
-    font-size: 1.03rem;
+  .method-icon {
+    margin-left: 0.35rem;
+    margin-bottom: 0.62rem;
   }
 
-  .method-card p {
+  .visa-card {
+    padding: 1.12rem 1.05rem 1.02rem;
+  }
+
+  .visa-card h3 {
+    font-size: 1rem;
+  }
+
+  .visa-card h4 {
     font-size: 0.91rem;
+  }
+
+  .visa-card p {
+    font-size: 0.9rem;
+  }
+
+  .method-cta-row {
+    margin-top: 1.4rem;
+  }
+
+  .method-cta-row .button {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.9rem;
   }
 
   #services .feature-card {
