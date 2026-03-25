@@ -262,6 +262,7 @@
           <div class="section-copy centered benefits-copy">
             <p class="eyebrow">Des bénéfices concrets</p>
             <h2>Ce que cette méthode change pour votre activité</h2>
+            <p class="benefits-transition">Concrètement, voici ce que cette méthode change pour votre activité.</p>
             <p>
               L’objectif n’est pas seulement d’avoir une plus belle page, mais une présence locale plus utile pour rassurer, faciliter la prise de contact et générer plus de demandes de devis.
             </p>
@@ -310,38 +311,77 @@
       </section>
 
       <section class="section section-muted" id="realisations">
-        <div class="container">
-          <div class="section-copy centered narrow">
+        <div class="container realisations-shell">
+          <div class="section-copy centered realisations-copy">
             <p class="eyebrow">Réalisations</p>
-            <h2>Des projets présentés de façon claire et professionnelle.</h2>
+            <p class="realisations-transition">Voici comment cette approche prend forme sur de vraies réalisations.</p>
+            <h2>Des réalisations conçues pour mettre l’activité en valeur et faciliter la prise de contact</h2>
             <p>
-              Cette section est prête à accueillir vos réalisations avec leurs visuels, leurs objectifs et leurs
-              résultats principaux.
+              Chaque projet est pensé pour clarifier l’offre, rassurer rapidement et guider le visiteur vers l’appel ou la demande de devis.
             </p>
           </div>
 
-          <div class="portfolio-grid">
-            <article class="portfolio-card">
-              <div class="portfolio-visual">Projet</div>
-              <div class="portfolio-content">
-                <h3>Nom du projet</h3>
-                <p>Présentation courte du métier, de la zone locale et du besoin traité.</p>
+          <div class="realisations-showcase" aria-label="Portfolio projets">
+            <div class="realisations-viewport" id="realisations-viewport">
+              <div class="realisations-track" id="realisations-track">
+                <article class="realisations-slide is-active">
+                  <div class="realisations-frame">
+                    <img class="scrolling-shot" src="realisation-site-plombier-chauffagiste.jpg" alt="Capture du site Plombier Chauffagiste Martin" loading="lazy" />
+                  </div>
+                  <div class="realisations-content">
+                    <h3>Plombier Chauffagiste Martin</h3>
+                    <p class="realisations-sector">Plomberie & chauffage — Lyon</p>
+                    <p>Une page pensée pour clarifier les services, rassurer rapidement et mettre en avant une zone d’intervention locale bien définie.</p>
+                  </div>
+                </article>
+
+                <article class="realisations-slide">
+                  <div class="realisations-frame">
+                    <img class="scrolling-shot" src="relisation-site-nettoyage-auto.png" alt="Capture du site Clean Car Luxury" loading="lazy" />
+                  </div>
+                  <div class="realisations-content">
+                    <h3>Clean Car Luxury</h3>
+                    <p class="realisations-sector">Nettoyage automobile premium — Toulouse</p>
+                    <p>Une landing page conçue pour valoriser une offre premium à domicile, rassurer sur la qualité du service et pousser à la réservation rapide.</p>
+                  </div>
+                </article>
+
+                <article class="realisations-slide">
+                  <div class="realisations-frame">
+                    <img class="scrolling-shot" src="réalisation-jm-toiture-be.jpg" alt="Capture du site JM Toiture" loading="lazy" />
+                  </div>
+                  <div class="realisations-content">
+                    <h3>JM Toiture</h3>
+                    <p class="realisations-sector">Toiture & couverture — Bruxelles</p>
+                    <p>Une page structurée pour présenter clairement les prestations de toiture, rassurer sur le sérieux de l’entreprise et faciliter la demande de devis local.</p>
+                  </div>
+                </article>
+
+                <article class="realisations-slide">
+                  <div class="realisations-frame">
+                    <img class="scrolling-shot" src="realisation-site-soudeur.png" alt="Capture du site M3D Metal" loading="lazy" />
+                  </div>
+                  <div class="realisations-content">
+                    <h3>M3D Metal</h3>
+                    <p class="realisations-sector">Fabrication métallique & soudure — Maroc</p>
+                    <p>Une page conçue pour valoriser un savoir-faire technique, rassurer sur la qualité d’exécution et mettre en avant une offre sur-mesure claire et professionnelle.</p>
+                  </div>
+                </article>
               </div>
-            </article>
-            <article class="portfolio-card">
-              <div class="portfolio-visual">Projet</div>
-              <div class="portfolio-content">
-                <h3>Nom du projet</h3>
-                <p>Présentation courte du métier, de la zone locale et du besoin traité.</p>
-              </div>
-            </article>
-            <article class="portfolio-card">
-              <div class="portfolio-visual">Projet</div>
-              <div class="portfolio-content">
-                <h3>Nom du projet</h3>
-                <p>Présentation courte du métier, de la zone locale et du besoin traité.</p>
-              </div>
-            </article>
+            </div>
+
+            <div class="realisations-controls" aria-label="Navigation réalisations">
+              <button class="realisations-nav" type="button" id="realisations-prev" aria-label="Réalisation précédente">‹</button>
+              <div class="realisations-progress" id="realisations-progress" role="status" aria-live="polite">1 / 4</div>
+              <button class="realisations-nav" type="button" id="realisations-next" aria-label="Réalisation suivante">›</button>
+            </div>
+
+            <div class="realisations-dots" id="realisations-dots" aria-hidden="true">
+              <span class="dot is-active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
           </div>
         </div>
       </section>
@@ -469,6 +509,81 @@
       }
 
       window.addEventListener('DOMContentLoaded', initBenefitsShowcase);
+      window.addEventListener('DOMContentLoaded', initRealisationsShowcase);
+
+      function initRealisationsShowcase() {
+        const viewport = document.getElementById('realisations-viewport');
+        const track = document.getElementById('realisations-track');
+        const prev = document.getElementById('realisations-prev');
+        const next = document.getElementById('realisations-next');
+        const progress = document.getElementById('realisations-progress');
+        const dots = Array.from(document.querySelectorAll('#realisations-dots .dot'));
+        const slides = Array.from(document.querySelectorAll('.realisations-slide'));
+        if (!viewport || !track || !prev || !next || !progress || slides.length === 0) return;
+
+        let index = 0;
+        const desktop = window.matchMedia('(min-width: 900px)');
+
+        function setActive(i, smooth = true) {
+          index = Math.max(0, Math.min(i, slides.length - 1));
+          slides.forEach((slide, idx) => slide.classList.toggle('is-active', idx === index));
+          dots.forEach((dot, idx) => dot.classList.toggle('is-active', idx === index));
+          progress.textContent = `${index + 1} / ${slides.length}`;
+
+          if (desktop.matches) {
+            track.style.transition = smooth ? 'transform 460ms ease' : 'none';
+            track.style.transform = `translateX(${-index * 100}%)`;
+          }
+        }
+
+        function updateShotDistance() {
+          slides.forEach((slide) => {
+            const frame = slide.querySelector('.realisations-frame');
+            const img = slide.querySelector('.scrolling-shot');
+            if (!frame || !img) return;
+            const distance = Math.max(0, img.scrollHeight - frame.clientHeight);
+            img.style.setProperty('--scroll-distance', `${distance}px`);
+          });
+        }
+
+        prev.addEventListener('click', () => setActive(index - 1));
+        next.addEventListener('click', () => setActive(index + 1));
+
+        viewport.addEventListener('scroll', () => {
+          if (desktop.matches) return;
+          const width = viewport.clientWidth;
+          if (!width) return;
+          const newIndex = Math.round(viewport.scrollLeft / width);
+          if (newIndex !== index) setActive(newIndex, false);
+        }, { passive: true });
+
+        function handleLayout() {
+          if (desktop.matches) {
+            viewport.scrollLeft = 0;
+            setActive(index, false);
+          } else {
+            track.style.transition = 'none';
+            track.style.transform = 'none';
+            viewport.scrollTo({ left: viewport.clientWidth * index, behavior: 'auto' });
+          }
+        }
+
+        const shots = document.querySelectorAll('.scrolling-shot');
+        shots.forEach((img) => {
+          if (img.complete) updateShotDistance();
+          else img.addEventListener('load', updateShotDistance, { once: true });
+        });
+
+        desktop.addEventListener('change', handleLayout);
+        window.addEventListener('resize', () => {
+          handleLayout();
+          updateShotDistance();
+        });
+
+        updateShotDistance();
+        setActive(0, false);
+      }
+
     </script>
 
   </body>
