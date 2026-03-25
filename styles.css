@@ -1183,6 +1183,35 @@ a {
   line-height: 1.62;
 }
 
+.realisations-proof {
+  margin-top: 0.95rem;
+  padding: 0.78rem 0.86rem;
+  border-radius: 12px;
+  border: 1px solid rgba(189, 123, 31, 0.36);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+}
+
+.proof-title {
+  margin: 0;
+  color: #f3d39a;
+  font-size: 0.81rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.proof-list {
+  margin: 0.52rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.proof-list li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.91rem;
+}
+
 .realisations-controls {
   margin-top: 0.95rem;
   display: flex;
@@ -1846,6 +1875,19 @@ a {
   .realisations-content p {
     font-size: 0.93rem;
     line-height: 1.7;
+  }
+
+  .realisations-proof {
+    margin-top: 0.82rem;
+    padding: 0.72rem 0.76rem;
+  }
+
+  .proof-title {
+    font-size: 0.77rem;
+  }
+
+  .proof-list li {
+    font-size: 0.88rem;
   }
 
   .realisations-controls {
