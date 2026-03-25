@@ -1,0 +1,16 @@
+<svg width="308" height="315" viewBox="0 0 308 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="silver" x1="154" y1="0" x2="154" y2="315" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8B8B8"/>
+      <stop offset="0.22" stop-color="#F5F5F5"/>
+      <stop offset="0.5" stop-color="#B0B0B0"/>
+      <stop offset="0.76" stop-color="#F3F3F3"/>
+      <stop offset="1" stop-color="#C5C5C5"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 13C0 5.8203 5.8203 0 13 0H295C305.426 0 311.986 11.2976 306.84 20.364L286.397 56.3782C284.083 60.4544 279.76 62.973 275.073 62.973H27.9038C23.182 62.973 18.8337 60.4166 16.5316 56.2935L1.6044 29.5559C0.560157 27.6851 0 25.579 0 23.4365V13Z" fill="url(#silver)"/>
+  <path d="M21.457 62.973H137.995L259.642 104.737H49.4957L21.457 62.973Z" fill="url(#silver)"/>
+  <path d="M48.8286 104.737H259.642L226.149 163.752H88.4686L48.8286 104.737Z" fill="url(#silver)"/>
+  <path d="M88.4686 163.752H147.228L201.699 212.463H120.582L88.4686 163.752Z" fill="url(#silver)"/>
+  <path d="M120.582 212.463H201.699L157.487 315H142.052L120.582 212.463Z" fill="url(#silver)"/>
+</svg>
