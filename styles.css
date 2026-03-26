@@ -1968,3 +1968,9 @@ a {
     transform: none;
   }
 }
+
+@media (max-width: 768px) {
+  .header-cta {
+    display: none;
+  }
+}
